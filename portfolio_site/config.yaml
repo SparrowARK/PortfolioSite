@@ -96,7 +96,7 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: "#"
+      url: "https://drive.google.com/file/d/1RGwlaS2JkoIVkD7pL_YW_szjnzDqluSn/view?usp=sharing"
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
