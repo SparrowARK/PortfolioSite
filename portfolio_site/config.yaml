@@ -92,7 +92,7 @@ params:
     title: "Aaditya."
     subtitle: "I build things for the web"
     content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
-    image: /images/hero.svg
+    image: /images/Aaditya.jpg
     button:
       enable: true
       name: "Resume"
@@ -100,12 +100,14 @@ params:
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
-          url: https://example.com
+          url: https://github.com/SparrowARK
         - icon: fab fa-twitter
-          url: https://example.com
-      customIcons:
-        - icon: /fav.png
-          url: "https://example.com"
+          url: https://twitter.com/Aaditya70000
+        - icon: fab fa-linkedin-in
+          url: https://www.linkedin.com/in/aaditya-raj-karki-18b664192
+      # customIcons:
+      #   - icon: "fab fa-linkedin-in"
+      #     url: https://www.linkedin.com/in/aaditya-raj-karki-18b664192
 
   # About
   about:
