@@ -90,8 +90,8 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Aaditya."
-    subtitle: "I build things for the web"
-    content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that looks great, feels fantastic, and functions correctly."
+    subtitle: "I like to build useful and fun things"
+    content: "I am a passionate developer. I am interested in making Games, Mobile Apps, Websites, Programs that uses Machine learning and AI and I am always open to learn new things."
     image: /images/Aaditya.jpg
     button:
       enable: true
