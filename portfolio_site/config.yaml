@@ -12,31 +12,31 @@ markup:
     renderer:
       unsafe: true
 
-Menus:
-  main:
-    - identifier: blog
-      name: Blog
-      title: Blog posts
-      url: /blogs
-      weight: 1
+# Menus:
+#   main: 
+#     - identifier: blog
+#       name: Blog
+#       title: Blog posts
+#       url: /blogs
+#       weight: 1
 
-    #Dropdown menu
-    - identifier: dropdown
-      title: Example dropdown menu
-      name: Dropdown
-      weight: 2
-    - identifier: dropdown1
-      title: example dropdown 1
-      name: example 1
-      url: /#
-      parent: dropdown
-      weight: 1
-    - identifier: dropdown2
-      title: example dropdown 2
-      name: example 2
-      url: /#
-      parent: dropdown
-      weight: 2
+#     #Dropdown menu
+#     - identifier: dropdown
+#       title: Example dropdown menu
+#       name: Dropdown
+#       weight: 2
+#     - identifier: dropdown1
+#       title: example dropdown 1
+#       name: example 1
+#       url: /#
+#       parent: dropdown
+#       weight: 1
+#     - identifier: dropdown2
+#       title: example dropdown 2
+#       name: example 2
+#       url: /#
+#       parent: dropdown
+#       weight: 2
 
 params:
   title: "aditya Raj Karki"
@@ -77,7 +77,7 @@ params:
   #   brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
   #   brandName: "Profile" # Brand name for the brand | default is the title variable
 
-  #   menus:
+  # menus:
   #     disableAbout: true
   #     disableExperience: true
   #     disableEducation: true
@@ -114,8 +114,8 @@ params:
     enable: true
     title: "About Me"
     image: "/images/Robot.jpg"
-    content: |
-      I am a Game developer. I have a background in computer science, and I have a strong interest in the intersection of technology and art. I am currently working as a Game developer at [AzrachIT](https://www.linkedin.com/company/azrach-it/about/) in Lalitpur, Nepal. 
+    content: |-
+      I am a Game developer. I have a background in computer science, and I have a strong interest in the intersection of technology and art. I am currently working as a Game developer at AzrachIT in Lalitpur, Nepal. 
 
       I am currently involved in a project that facilitates multiplayer gaming using mobile phones, allowing people to play games together.
     skills:
