@@ -4,7 +4,7 @@ title: "Aaditya Raj Karki"
 theme: hugo-profile
 
 Paginate: 3
-disqusShortname: gurusabarish
+disqusShortname: aaditya
 googleAnalytics: G-DWJJVE27WD
 
 markup:
@@ -325,14 +325,14 @@ params:
   contact:
     enable: true
     content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
-    email: gurusabarisha@gmail.com
+    email: karkiaaditya2@gmail.com
     btnName: Mail me
 
   footer:
     recentPosts: false
     socialNetworks:
-      github: https://github.com
-      linkedin: https://linkedin.com
-      twitter: https://twitter.com
-      instagram: https://instagram.com
+      github: https://github.com/SparrowARK
+      linkedin: https://www.linkedin.com/in/aaditya-raj-karki-18b664192
+      twitter: https://twitter.com/Aaditya70000
+      # instagram: https://instagram.com
       # facebook: https://facebook.com
