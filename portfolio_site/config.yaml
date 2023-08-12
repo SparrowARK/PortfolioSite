@@ -113,131 +113,150 @@ params:
   about:
     enable: true
     title: "About Me"
-    image: "/images/me.png"
-    content: |-
-      I am a software developer with a passion for web development. I have a background in computer science and mathematics, and I have a strong interest in the intersection of technology and art. I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. 
+    image: "/images/Robot.jpg"
+    content: |
+      I am a Game developer. I have a background in computer science, and I have a strong interest in the intersection of technology and art. I am currently working as a Game developer at [AzrachIT](https://www.linkedin.com/company/azrach-it/about/) in Lalitpur, Nepal. 
 
-      I am currently working on a project that will be used to help people find the best way to get around the city.
+      I am currently involved in a project that facilitates multiplayer gaming using mobile phones, allowing people to play games together.
     skills:
       enable: true
       title: "Here are a few technologies I've been working with recently:"
       items:
-        - "HTML"
-        - "CSS"
-        - "JavaScript"
-        - "React"
-        - "Node"
-        - "Express"
+        - "Unreal Engine"
+        - "AWS Gamelift"
+        - "Android Multiplayer system"
+        - "Python"
+        - "C#"
+        - "Unity"
 
   # Experience
   experience:
     enable: true
     items:
-      - job: "Senior Software Developer"
-        company: "Facebook"
-        companyUrl: "https://example.com"
-        date: "Jan 2022 - present"
+      - job: "Game Development Engineer"
+        company: "AzrachIT"
+        companyUrl: "https://www.linkedin.com/company/azrach-it/about/"
+        date: "June 2022 - present"
         featuredLink:
           enable: true
           name: "View the project"
-          url: "https://example.com"
-        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+          url: "https://play.google.com/store/apps/details?id=com.azrachit.traitortown&pli=1"
+        content: |
+          I am currently working as a game developer at [AzrachIT](https://www.linkedin.com/company/azrach-it/about/) in Lalitpur, Nepal. I am currently working on a project that will be fun to play using mobile phones.
+          
+          - Unreal Engine.
+          - AWS Gamelift EC2 (Building Server and hosting).
+          - Worked on gameplay logic and mechanics.
+          - Worked on making multiplayer system.
+          - Made multiplayer work on Android.
+          - Published game on google play console.
 
-      - job: "Software Developer"
-        company: "Amazon"
-        companyUrl: "https://example.com"
-        date: "Sep 2020 - Dec 2021"
+      - job: "Data Entry"
+        company: "EKbana Solutions"
+        companyUrl: "https://ekbana.com/"
+        date: "Oct 2018 - Nov 2019"
         featuredLink:
-          enable: true
+          enable: false
           url: "https://example.com"
         info:
           enable: true
-          content: I worked as a software developer for more than one year in Amazon.
+          content: I worked in data entry position for more than one year in Ekbana.
         content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+          I worked in data entry position at [Ekbana](https://ekbana.com/) in Lalitpur, Nepal. I used to work on image annotation, like labeling satellite images and prepare labeled images data for machine learning purpose. I used to add ,update and remove basic data from excel sheet to website/ Paper forms to website. I used to collect data specific from google maps and make data in google sheets or excel file. I used to add location data in QGIS mad and also made line route for road in QGIS map.
 
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
+          - Image Ammotator (Labelme).
+          - Data entry.
+          - QGIS
 
-      - job: "Junior Software Developer"
-        company: "Apple"
-        companyUrl: "https://example.com"
-        date: "Jan 2020 - Aug 2020"
+      - job: "Image Annotator"
+        company: "IdenTV Nepal"
+        companyUrl: "https://www.linkedin.com/company/identvnepal/about/"
+        date: ""
         info:
           enable: false
         featuredLink:
-          enable: true
+          enable: false
           url: "https://example.com"
         content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+          I worked here as Immage annotator. I used Microsoft Vott to label images.
 
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
+          - Microsoft Vott
+          - Prepare data for Machine Learning by Labeling company brand images.
 
-      - job: "UI/UX Designer"
-        company: "Netflix"
-        companyUrl: "https://example.com"
-        date: "June 2017 - Nov 2019"
-        featuredLink:
-          enable: true
-          url: "https://example.com"
-        content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+      # - job: "UI/UX Designer"
+      #   company: "Netflix"
+      #   companyUrl: "https://example.com"
+      #   date: "June 2017 - Nov 2019"
+      #   featuredLink:
+      #     enable: true
+      #     url: "https://example.com"
+      #   content: |
+      #     I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
 
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
+      #     - Lead backend developer for a product.
+      #     - Created a frontend design for a product.
 
-      - job: "Product Designer"
-        company: "Google"
-        companyUrl: "https://example.com"
-        date: "Feb 2016 - Mar 2017"
-        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+      # - job: "Product Designer"
+      #   company: "Google"
+      #   companyUrl: "https://example.com"
+      #   date: "Feb 2016 - Mar 2017"
+      #   content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
 
   # Education
   education:
     enable: true
     # index: true
     items:
-      - title: "Master of Business Administration"
+      # - title: "Master of Business Administration"
+      #   school:
+      #     name: "University of California, Berkeley"
+      #     url: "https://example.org"
+      #   date: "2013 - 2015"
+      #   GPA: "3.8 out of 5.0"
+      #   content: |-
+      #     Extracurricular Activities
+      #       - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      #       - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+      - title: "Bachelor of Science with Honours in Computer Science"
         school:
-          name: "University of California, Berkeley"
-          url: "https://example.org"
-        date: "2013 - 2015"
-        GPA: "3.8 out of 5.0"
+          name: "University of Wolverhampton"
+          url: "https://heraldcollege.edu.np/bachelors-in-computer-science"
+        date: "2019 - 2022"
+        GPA: "First Class Honours"
         content: |-
-          Extracurricular Activities
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-      - title: "Bachelor of Science in Computer Science"
-        school:
-          name: "Massachusetts Institute of Technology"
-          url: "https://example.org"
-        date: "2009 - 2013"
-        GPA: "3.9 out of 5.0"
-        content: |-
-          I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
-          - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
-          - Face mask detection using a single convolutional neural network.
-
-          Extracurricular Activities
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+          - Created face detection attendance system using Django for Final Year Project
+          - Automated Agents in Virtual World (Unity). 
+          - Data collection and Visualization work in Python.
+          - Bookmark Management System (Django)
+          - College Management System (Java)
+          - Covid Data Form (Java + MySQL)
         featuredLink:
-          enable: true
+          enable: false
           name: "My academic record"
           url: "https://example.com"
       - title: "High School"
         school:
-          name: "Thomas Jefferson High School for Science and Technology."
-          url: "https://example.org"
-        GPA: "4.2 out of 5.0"
+          name: "National School of Sciences (NIST)"
+          url: "https://nist.edu.np/"
+        GPA: ""
+        content: |-
+              I completed HSEB from this college. My faculty was Science with Biology and Extra Math.
         featuredLink:
-          enable: true
+          enable: false
+          url: ""
+          
+      - title: "School (SLC)"
+        school:
+          name: "Siddhartha Vanasthali Institute"
+          url: ""
+        GPA: "3.10"
+        featuredLink:
+          enable: false
           url: "https://example.com"
 
   # Achievements
   achievements:
-    enable: true
+    enable: false
     items:
       - title: Google kickstart runner
         content: I solved all problems with optimal solution.
@@ -255,7 +274,7 @@ params:
 
   # projects
   projects:
-    enable: true
+    enable: false
     items:
       - title: Hugo Profile
         content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
@@ -310,10 +329,10 @@ params:
     btnName: Mail me
 
   footer:
-    # recentPosts: false
+    recentPosts: false
     socialNetworks:
       github: https://github.com
       linkedin: https://linkedin.com
       twitter: https://twitter.com
       instagram: https://instagram.com
-      facebook: https://facebook.com
+      # facebook: https://facebook.com
