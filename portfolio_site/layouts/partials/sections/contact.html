@@ -10,7 +10,7 @@
                     </div>
                     {{ if .Site.Params.contact.email }}
                     <div class="text-center pt-3">
-                        <a href="mailto:{{ .Site.Params.contact.email }}" class="btn">
+                        <a href="mailto:{{ .Site.Params.contact.email }}" class="btn" target="_blank">
                             {{ .Site.Params.contact.btnName | default "Get in Touch" }}
                         </a>
                     </div>
