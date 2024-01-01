@@ -16,13 +16,13 @@
                     {{ .Site.Params.hero.content | markdownify }}
                 </p>
                 <div class="row">
-                    <div class="col-auto h-100">
+                    <!-- <div class="col-auto h-100">
                         {{ if .Site.Params.hero.button.enable }}
                         <a target= "_blank" href="{{ .Site.Params.hero.button.url }}" class="btn">
                             {{ .Site.Params.hero.button.name }}
                         </a>
                         {{ end }}
-                    </div>
+                    </div> -->
                     <div class="col-auto px-0 h-100">
                         {{- partial "sections/hero/social.html" . -}}
                     </div>
