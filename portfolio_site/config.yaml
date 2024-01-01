@@ -133,7 +133,7 @@ params:
   experience:
     enable: true
     items:
-      - job: "Game Development Engineer"
+      - job: "Game Developer"
         company: "AzrachIT"
         companyUrl: "https://www.linkedin.com/company/azrach-it/about/"
         date: "June 2022 - present"
