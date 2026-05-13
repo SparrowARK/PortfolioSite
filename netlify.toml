@@ -8,10 +8,12 @@
   command = "hugo --gc --minify"
 
 [build.environment]
-  # Pin Hugo to a modern, well-tested Extended release.
-  # The previous (theme-default) version 0.92.0 is from 2022 and is too old for
-  # several template constructs used in this site, which caused exit code 255.
-  HUGO_VERSION       = "0.140.2"
+  # Pin Hugo to the same version used locally so builds are byte-for-byte
+  # reproducible between the developer machine and Netlify.
+  # The theme-default 0.92.0 (2022) was missing modern template syntax, and
+  # 0.140.2 (Dec 2024) predates the `twitter` -> `x` shortcode rename
+  # (Hugo 0.141.0, Jan 2025) used in content/blogs/rich-content.md.
+  HUGO_VERSION       = "0.161.1"
   HUGO_ENV           = "production"
   HUGO_ENABLEGITINFO = "true"
   TZ                 = "America/Toronto"
@@ -21,14 +23,14 @@
   command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.140.2"
+  HUGO_VERSION = "0.161.1"
 
 # Branch deploys behave the same way.
 [context.branch-deploy]
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy.environment]
-  HUGO_VERSION = "0.140.2"
+  HUGO_VERSION = "0.161.1"
 
 # ---------------------------------------------------------------------------
 # Performance: long-lived caching for fingerprinted/static assets.
