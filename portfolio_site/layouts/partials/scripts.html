@@ -19,15 +19,26 @@
 
 {{- if (not .Site.Params.theme.disableThemeToggle) }}
 <script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        var isDark = document.documentElement.classList.toggle("dark");
-        document.body.classList.toggle("dark", isDark);
-        localStorage.setItem("pref-theme", isDark ? "dark" : "light");
-    });
+    // The theme-toggle button exists by the time this inline script runs
+    // (it lives in the header partial, parsed before this one), so we can
+    // wire it up immediately and the click happens way after Bootstrap loads.
+    var themeToggleBtn = document.getElementById("theme-toggle");
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener("click", function () {
+            var isDark = document.documentElement.classList.toggle("dark");
+            document.body.classList.toggle("dark", isDark);
+            localStorage.setItem("pref-theme", isDark ? "dark" : "light");
+        });
+    }
 
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
+    // Bootstrap is loaded with `defer`, so the global `bootstrap` is NOT
+    // available while this inline script runs. Defer the Tooltip
+    // initialisation until DOMContentLoaded, which fires after all
+    // deferred scripts have executed.
+    document.addEventListener("DOMContentLoaded", function () {
+        if (typeof bootstrap === "undefined" || !bootstrap.Tooltip) return;
+        var triggers = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        triggers.forEach(function (el) { new bootstrap.Tooltip(el); });
     });
 </script>
 {{- end }}

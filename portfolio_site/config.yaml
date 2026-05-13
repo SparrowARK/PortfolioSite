@@ -49,7 +49,10 @@ minify:
 #       weight: 2
 
 params:
-  title: "Aaditya Raj Karki"
+  # The favicon ("A" mark) is rendered immediately before this title in the
+  # navbar, so it visually composes as "A" + "aditya..." = "Aaditya Raj Karki".
+  # Keep the leading lowercase 'a' on purpose.
+  title: "aditya Raj Karki"
   description: "Aaditya Raj Karki - Software Engineer building reliable backends, automated workflows, and AI-driven systems. Portfolio, experience, and projects."
   # staticPath: ""  # The path to serve the static files from
   favicon: "/fav.png"

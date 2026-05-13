@@ -22,16 +22,23 @@
 <header>
     <nav class="pt-3 navbar navbar-expand-lg">
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
-            <!-- navbar brand -->
+            {{- /*
+              Navbar brand. The favicon is rendered as the leading "A"
+              glyph; the brand text is therefore intentionally lowercase
+              (e.g. "aditya Raj Karki") so the visual reads as one word
+              ("Aaditya Raj Karki"). Keep the alt text empty for the
+              decorative logo to avoid screen readers announcing the
+              "A" twice, and put the full name on the link itself.
+            */ -}}
             <a class="navbar-brand primary-font text-wrap" href="{{ .Site.BaseURL | relURL }}"
-                aria-label="{{ .Site.Params.navbar.brandName | default .Site.Params.title }} – home">
+                aria-label="A{{ .Site.Params.navbar.brandName | default .Site.Params.title }} – home">
                 {{ if or (.Site.Params.favicon) (.Site.Params.navbar.brandLogo) }}
                 <img src="{{ .Site.Params.navbar.brandLogo | default .Site.Params.favicon }}" width="30" height="30"
-                    class="d-inline-block align-top"
-                    alt="{{ .Site.Params.navbar.brandName | default .Site.Params.title }}">
-                {{ else }}
-                {{ .Site.Params.navbar.brandName | default .Site.Params.title }}
+                    class="d-inline-block align-top brand-logo"
+                    alt=""
+                    aria-hidden="true">
                 {{ end }}
+                <span class="brand-name">{{ .Site.Params.navbar.brandName | default .Site.Params.title }}</span>
             </a>
 
             <!-- navbar toggler -->
