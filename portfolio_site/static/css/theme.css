@@ -1,10 +1,20 @@
+/* Ensure the page background fills the whole viewport in both themes so
+   nothing peeks through behind the layout. Also smooth the colour swap
+   when the theme is toggled. */
+html, body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
 /* light mode */
 .light > *{
     background-color: var(--background-color) !important;
     color: var(--text-color) !important;
 }
 
-/* dark mode */
+/* dark mode (class may live on <html> for FOUC-free init, or on <body>
+   when toggled at runtime) */
 .dark {
     --background-color: var(--background-color-dark) !important;
     --secondary-background-color: var(--secondary-background-color-dark) !important;
@@ -32,12 +42,15 @@ button#theme-toggle {
     margin: auto 4px;
 }
 
-body.dark #moon {
+/* Show the right icon for the active theme. The `dark` class is applied
+   to both <html> (in the anti-FOWT head script) and <body> (when toggled
+   at runtime); these selectors target whichever ancestor carries it. */
+.dark #moon {
     vertical-align: middle;
     display: none;
 }
 
-body:not(.dark) #sun {
+html:not(.dark) #sun {
     display: none;
 }
 

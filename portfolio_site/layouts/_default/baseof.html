@@ -1,7 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  {{- /*
+    Anti-FOWT (Flash of Wrong Theme): apply the user's saved theme to
+    <html> synchronously, before <body> has a chance to paint. Without
+    this, returning visitors whose `pref-theme` is "dark" see the page
+    render briefly in light mode and then snap to dark — which can look
+    like a black overlay being dropped on top of the page.
+  */ -}}
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("pref-theme");
+        var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (saved === "dark" || (!saved && prefersDark)) {
+          document.documentElement.classList.add("dark");
+        }
+      } catch (e) { /* localStorage may be unavailable; default to light */ }
+    })();
+  </script>
   {{- partial "head.html" . -}}
   {{- block "head" . }} {{- end }}
   <title>
@@ -9,9 +27,8 @@
   </title>
 </head>
 
-<body class="light" onload="loading()">
+<body class="light">
   <!-- javascripts -->
-  <!-- <script src="/js/jquery-3.6.0.min.js"></script> -->
   <script defer src="{{ .Site.Params.staticPath }}/bootstrap-5/js/bootstrap.bundle.js"></script>
 
   {{- partial "sections/header.html" . -}}

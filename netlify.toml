@@ -33,25 +33,31 @@
   HUGO_VERSION = "0.161.1"
 
 # ---------------------------------------------------------------------------
-# Performance: long-lived caching for fingerprinted/static assets.
-# Hugo emits hashed asset names where applicable; for everything else under
-# /images, /css, /js, /fontawesome-5, /bootstrap-5 we serve with a long cache
-# and allow Netlify to revalidate via ETag.
+# Caching strategy
+#
+# Hugo here does NOT fingerprint /css and /js filenames, so we MUST allow
+# the browser to revalidate them — otherwise a returning visitor is stuck
+# on whatever version they cached, even after a fresh deploy. We use a
+# short max-age plus stale-while-revalidate for a responsive feel.
+#
+# Versioned vendor directories (bootstrap-5, fontawesome-5) already carry
+# the major version in the path, so they're safe to cache aggressively.
 # ---------------------------------------------------------------------------
-[[headers]]
-  for = "/images/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
   for = "/css/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=600, stale-while-revalidate=86400"
 
 [[headers]]
   for = "/js/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=600, stale-while-revalidate=86400"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
 
 [[headers]]
   for = "/fontawesome-5/*"

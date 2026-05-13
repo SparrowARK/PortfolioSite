@@ -1,16 +1,24 @@
-<span id="loading-icons" style="display: none;">
+{{- /*
+  Social icons. We used to hide this block with `display: none` and
+  reveal it from JS on page load, to mask the brief moment between HTML
+  parse and FontAwesome JS swapping <i> for <svg>. That hack was driven
+  by an onload= handler that we've removed. Leaving it visible is the
+  correct, accessible default: the worst case is ~1 frame of empty <i>
+  tags before FA replaces them, which is imperceptible.
+*/ -}}
+<span class="social-icons">
     {{ range .Site.Params.hero.socialLinks.fontAwesomeIcons }}
     <span class="px-1">
-        <a href="{{ .url }}" target="_blank" class="btn social-icon">
-            <i class="{{ .icon }}"></i>
+        <a href="{{ .url }}" target="_blank" rel="noopener" aria-label="social link" class="btn social-icon">
+            <i class="{{ .icon }}" aria-hidden="true"></i>
         </a>
     </span>
     {{ end }}
 
     {{ range .Site.Params.hero.socialLinks.customIcons }}
     <span class="px-1">
-        <a href="{{ .url }}" target="_blank" class="btn social-icon">
-            <img src="{{ .icon }}">
+        <a href="{{ .url }}" target="_blank" rel="noopener" aria-label="social link" class="btn social-icon">
+            <img src="{{ .icon }}" alt="" loading="lazy" decoding="async">
         </a>
     </span>
     {{ end }}
