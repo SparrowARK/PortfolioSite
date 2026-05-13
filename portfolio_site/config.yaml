@@ -3,14 +3,24 @@ locale: "en-us"
 title: "Aaditya Raj Karki"
 theme: hugo-profile
 
-Paginate: 3
-disqusShortname: Aaditya Raj Karki
+# Use the new pagination key (Hugo 0.128+). The legacy `Paginate` was deprecated
+# and is being removed; this keeps the build working on the latest Hugo releases.
+pagination:
+  pagerSize: 3
+
+disqusShortname: aaditya-raj-karki
 googleAnalytics: G-CN90221JWW
 
+# Allow raw HTML in markdown (used by the theme's content pages).
 markup:
   goldmark:
     renderer:
       unsafe: true
+
+# Minify HTML/CSS/JS at build time as well as via the `--minify` flag.
+minify:
+  disableXML: true
+  minifyOutput: true
 
 # Menus:
 #   main:
@@ -39,8 +49,8 @@ markup:
 #       weight: 2
 
 params:
-  title: "aditya Raj Karki"
-  description: Text about my cool site
+  title: "Aaditya Raj Karki"
+  description: "Aaditya Raj Karki - Software Engineer building reliable backends, automated workflows, and AI-driven systems. Portfolio, experience, and projects."
   # staticPath: ""  # The path to serve the static files from
   favicon: "/fav.png"
 

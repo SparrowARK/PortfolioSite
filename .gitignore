@@ -1,0 +1,26 @@
+# Hugo build artifacts
+portfolio_site/public/
+portfolio_site/resources/_gen/
+portfolio_site/.hugo_build.lock
+hugo_stats.json
+
+# Hugo binaries that may be dropped beside the project
+hugo.exe
+hugo.darwin
+hugo.linux
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Netlify local CLI
+.netlify/
+
+# Node (in case any tooling is added later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

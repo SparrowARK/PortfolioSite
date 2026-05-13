@@ -1,0 +1,73 @@
+# Netlify build configuration for the Hugo portfolio site.
+# This file lives at the repository root and overrides settings configured in the Netlify UI.
+
+[build]
+  # The Hugo project lives in the `portfolio_site/` subdirectory.
+  base    = "portfolio_site"
+  publish = "public"
+  command = "hugo --gc --minify"
+
+[build.environment]
+  # Pin Hugo to a modern, well-tested Extended release.
+  # The previous (theme-default) version 0.92.0 is from 2022 and is too old for
+  # several template constructs used in this site, which caused exit code 255.
+  HUGO_VERSION       = "0.140.2"
+  HUGO_ENV           = "production"
+  HUGO_ENABLEGITINFO = "true"
+  TZ                 = "America/Toronto"
+
+# Deploy previews (pull requests): point Hugo at the preview URL.
+[context.deploy-preview]
+  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.140.2"
+
+# Branch deploys behave the same way.
+[context.branch-deploy]
+  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy.environment]
+  HUGO_VERSION = "0.140.2"
+
+# ---------------------------------------------------------------------------
+# Performance: long-lived caching for fingerprinted/static assets.
+# Hugo emits hashed asset names where applicable; for everything else under
+# /images, /css, /js, /fontawesome-5, /bootstrap-5 we serve with a long cache
+# and allow Netlify to revalidate via ETag.
+# ---------------------------------------------------------------------------
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/fontawesome-5/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/bootstrap-5/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# ---------------------------------------------------------------------------
+# Security headers applied to every response.
+# ---------------------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
+    Permissions-Policy     = "camera=(), microphone=(), geolocation=()"
